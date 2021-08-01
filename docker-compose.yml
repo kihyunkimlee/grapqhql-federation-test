@@ -1,0 +1,5 @@
+version: '3'
+services:
+  sub1:
+  sub2:
+  gateway:
