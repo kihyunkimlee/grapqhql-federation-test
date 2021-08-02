@@ -1,11 +1,8 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { PubSub } from 'graphql-subscriptions';
+import { Injectable } from '@nestjs/common';
 import { DogEntity } from './entities/dog.entity';
 
 @Injectable()
 export class DogService {
-  constructor(@Inject('PUB_SUB') private readonly pubsub: PubSub) {}
-
   findDogById(id: number): DogEntity {
     return {
       id: id,

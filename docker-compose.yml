@@ -4,24 +4,21 @@ services:
     build: ./gateway
     ports: 
       - '3000:3000'
-    volumes: 
-      - './gateway/node_modules:/home/app/node_modules'
+    volumes:
       - './gateway/src:/home/app/src'
-    depends_on: 
+    links:
       - sub1
       - sub2
-    # entrypoint: ./sync_script.sh
+#    entrypoint: ['sh', './sync_script.sh']
   sub1:
     build: ./sub1
-    ports: 
-      - '3001:3000'
-    volumes: 
-      - './sub1/node_modules:/home/app/node_modules'
+    ports:
+      - '3001:3001'
+    volumes:
       - './sub1/src:/home/app/src'
   sub2:
     build: ./sub2
     ports:
-      - '3002:3000'
-    volumes: 
-      - './sub2/node_modules:/home/app/node_modules'
+      - '3002:3002'
+    volumes:
       - './sub2/src:/home/app/src'

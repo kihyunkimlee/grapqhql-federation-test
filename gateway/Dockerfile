@@ -8,4 +8,6 @@ RUN yarn install
 
 COPY . .
 
+# RUN apk --no-cache add curl
+
 CMD ["npm", "run", "start:dev"]
