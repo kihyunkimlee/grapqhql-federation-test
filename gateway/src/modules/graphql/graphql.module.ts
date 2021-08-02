@@ -12,7 +12,7 @@ import { GraphQLGatewayModule } from '@nestjs/graphql';
       },
       server: {
         cors: true,
-        installSubscriptionHandlers: true,
+        // installSubscriptionHandlers: true,
       },
     }),
   ],

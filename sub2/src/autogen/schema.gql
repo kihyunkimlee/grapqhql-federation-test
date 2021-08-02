@@ -21,3 +21,7 @@ type Dog {
 type Query {
   dog(id: Float!): Dog!
 }
+
+type Subscription {
+  barked: String!
+}

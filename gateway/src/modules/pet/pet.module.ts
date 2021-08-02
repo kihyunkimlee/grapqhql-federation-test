@@ -7,10 +7,10 @@ import { PubSub } from 'graphql-subscriptions';
   providers: [
     PetResolver,
     PetService,
-    {
-      provide: 'PUB_SUB',
-      useValue: new PubSub(),
-    },
+    // {
+    //   provide: 'PUB_SUB',
+    //   useValue: new PubSub(),
+    // },
   ],
 })
 export class PetModule {}

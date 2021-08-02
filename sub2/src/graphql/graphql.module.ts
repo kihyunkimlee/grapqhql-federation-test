@@ -7,6 +7,7 @@ import { join } from 'path';
     GraphQLFederationModule.forRoot({
       cors: true,
       autoSchemaFile: join(process.cwd(), 'src/autogen/schema.gql'),
+      installSubscriptionHandlers: true,
     }),
   ],
 })
